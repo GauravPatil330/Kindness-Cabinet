@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/background_login">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="24dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginRight="16sp"
+        android:layout_marginLeft="16sp">
+
+        <TextView
+            android:id="@+id/tvLoginTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login Here..."
+            android:textAlignment="center"
+            android:textColor="#226DE1"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/aldrich"
+            android:layout_marginTop="10sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70sp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16sp"
+                android:layout_marginRight="16sp"
+                app:boxStrokeColor="@color/blue"
+                app:hintTextColor="@color/black"
+                app:boxStrokeWidth="2sp" >
+
+                <EditText
+                    android:id="@+id/etLoginusername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_username"
+                    android:drawablePadding="8sp"
+                    android:fontFamily="@font/adamina"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:paddingLeft="10sp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16sp"
+                android:layout_marginRight="16sp"
+                android:layout_marginTop="15sp"
+                app:boxStrokeColor="@color/blue"
+                app:hintTextColor="@color/black"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#80000000"
+                app:passwordToggleDrawable="@drawable/password_toggle"
+                app:boxStrokeWidth="2sp" >
+
+                <EditText
+                    android:id="@+id/etLoginPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/icon_password"
+                    android:drawablePadding="8sp"
+                    android:fontFamily="@font/adamina"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10sp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvLoginForgetPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Forget Password ?"
+                android:gravity="right"
+                android:layout_marginRight="16sp"
+                android:layout_marginTop="5sp"
+                android:textColor="#226DE1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/aldrich" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLoginLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="16sp"
+                android:background="@drawable/background_btn_bg"
+                android:fontFamily="@font/aldrich"
+                android:text="Login"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create Account ?"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/adamina"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="70sp"/>
+
+            <TextView
+                android:id="@+id/tvLoginNewUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Sign in"
+                android:textAlignment="center"
+                android:textColor="#226DE1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/aldrich"
+                android:layout_marginLeft="130sp"
+                android:layout_marginTop="-24sp"
+                android:layout_marginBottom="20sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:src="@drawable/image_or"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-10sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLoginGoogleWithSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16sp"
+                android:layout_marginRight="16sp"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/image_google_btn"
+                android:fontFamily="@font/aldrich"
+                android:text="Sign in with google"
+                android:gravity="center"
+                android:paddingLeft="50sp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20sp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

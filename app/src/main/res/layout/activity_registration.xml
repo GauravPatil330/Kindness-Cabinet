@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-145dp"
+            android:src="@drawable/background_registration" />
+
+    <TextView
+        android:id="@+id/tvRegisterTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create a Account"
+        android:textAlignment="center"
+        android:textColor="#226DE1"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/aldrich"
+        android:layout_marginTop="120sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRegisterTitle"
+        android:layout_marginTop="20sp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:boxStrokeColor="@color/blue"
+            app:hintTextColor="@color/black"
+            app:boxStrokeWidth="2sp" >
+
+            <EditText
+                android:id="@+id/etRegisterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_name"
+                android:drawablePadding="8sp"
+                android:fontFamily="@font/adamina"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:paddingLeft="10sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:boxStrokeColor="@color/blue"
+            app:hintTextColor="@color/black"
+            app:boxStrokeWidth="2sp"
+            android:layout_marginTop="10sp" >
+
+            <EditText
+                android:id="@+id/etRegisterMobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_mobile_no"
+                android:drawablePadding="8sp"
+                android:fontFamily="@font/adamina"
+                android:hint="Mobile No"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:paddingLeft="10sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:boxStrokeColor="@color/blue"
+            app:hintTextColor="@color/black"
+            app:boxStrokeWidth="2sp"
+            android:layout_marginTop="10sp" >
+
+            <EditText
+                android:id="@+id/etRegisterEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_email"
+                android:drawablePadding="8sp"
+                android:fontFamily="@font/adamina"
+                android:hint="Email ID"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:boxStrokeColor="@color/blue"
+            app:hintTextColor="@color/black"
+            app:boxStrokeWidth="2sp"
+            android:layout_marginTop="10sp" >
+
+            <EditText
+                android:id="@+id/etRegisterGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_gender"
+                android:drawablePadding="8sp"
+                android:fontFamily="@font/adamina"
+                android:hint="Gender"
+                android:inputType="text"
+                android:paddingLeft="10sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:boxStrokeColor="@color/blue"
+            app:hintTextColor="@color/black"
+            app:boxStrokeWidth="2sp"
+            android:layout_marginTop="10sp" >
+
+            <EditText
+                android:id="@+id/etRegisterAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_age"
+                android:drawablePadding="8sp"
+                android:fontFamily="@font/adamina"
+                android:hint="Age"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:boxStrokeColor="@color/blue"
+            app:hintTextColor="@color/black"
+            app:boxStrokeWidth="2sp"
+            android:layout_marginTop="10sp" >
+
+            <EditText
+                android:id="@+id/etRegisterAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_address"
+                android:drawablePadding="8sp"
+                android:fontFamily="@font/adamina"
+                android:hint="Address"
+                android:inputType="text"
+                android:paddingLeft="10sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:boxStrokeColor="@color/blue"
+            app:hintTextColor="@color/black"
+            app:boxStrokeWidth="2sp"
+            android:layout_marginTop="10sp" >
+
+            <EditText
+                android:id="@+id/etRegisterUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_username"
+                android:drawablePadding="8sp"
+                android:fontFamily="@font/adamina"
+                android:hint="Username"
+                android:inputType="text"
+                android:paddingLeft="10sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            android:layout_marginTop="10sp"
+            app:boxStrokeColor="@color/blue"
+            app:hintTextColor="@color/black"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#80000000"
+            app:passwordToggleDrawable="@drawable/password_toggle"
+            app:boxStrokeWidth="2sp" >
+
+            <EditText
+                android:id="@+id/etRegisterPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/icon_password"
+                android:drawablePadding="8sp"
+                android:fontFamily="@font/adamina"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="10sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            android:layout_marginTop="10sp"
+            app:boxStrokeColor="@color/blue"
+            app:hintTextColor="@color/black"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#80000000"
+            app:passwordToggleDrawable="@drawable/password_toggle"
+            app:boxStrokeWidth="2sp" >
+
+            <EditText
+                android:id="@+id/etRegisterConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/icon_password"
+                android:drawablePadding="8sp"
+                android:fontFamily="@font/adamina"
+                android:hint="Comfirm Password"
+                android:inputType="textPassword"
+                android:paddingLeft="10sp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegisterRegister"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="16sp"
+            android:background="@drawable/background_btn_bg"
+            android:fontFamily="@font/aldrich"
+            android:text="Register"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20sp"/>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "847373779519",
+    "project_id": "kindness-cabinet",
+    "storage_bucket": "kindness-cabinet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847373779519:android:a76e172992fef9e425ee8a",
+        "android_client_info": {
+          "package_name": "com.gauravpatil.kindnesscabinet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI157sq6y5zxB_T1gGKslkm3I7x_62osY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

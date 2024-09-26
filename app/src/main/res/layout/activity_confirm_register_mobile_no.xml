@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Confirm_Register_MobileNo_Activity"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/icon_forget_password"
+        android:layout_marginTop="-80sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        app:boxStrokeColor="@color/blue"
+        app:hintTextColor="@color/black"
+        app:boxStrokeWidth="2sp"
+        android:layout_marginTop="30sp" >
+
+        <EditText
+            android:id="@+id/etConfirmRegisterMobileNoMobileNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_mobile_no"
+            android:drawablePadding="8sp"
+            android:fontFamily="@font/adamina"
+            android:hint="Enter Register Mobile No"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:paddingLeft="10sp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConfirmRegisterMobileNoVerify"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/background_btn_bg"
+        android:fontFamily="@font/aldrich"
+        android:text="Send OTP"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
