@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import com.gauravpatil.kindnesscabinet.java_classes.NetworkChangeListener;
+import com.gauravpatil.kindnesscabinet.java_classes.Urls;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -185,7 +186,7 @@ public class LoginActivity extends AppCompatActivity
         params.put("username",etUsername.getText().toString());
         params.put("password",etPassword.getText().toString());
 
-        client.post("http://192.168.70.39:80/KindnessCabinetAPI/userlogin.php",params,
+        client.post(Urls.userLogin,params,
                 new JsonHttpResponseHandler()
                 {
                     @Override

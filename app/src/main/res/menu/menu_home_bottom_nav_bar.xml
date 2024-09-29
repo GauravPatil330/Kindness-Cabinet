@@ -7,23 +7,23 @@
         android:icon="@drawable/icon_home" />
 
     <item
-        android:id="@+id/menuBottomNavExplore"
-        android:title="Explore"
-        android:icon="@drawable/icon_explore" />
+        android:id="@+id/menuBottomNavSearch"
+        android:title="Search"
+        android:icon="@drawable/icon_search" />
 
     <item
-        android:id="@+id/menuBottomNavEntertainment"
-        android:title="Entertainment"
-        android:icon="@drawable/icon_entertainment" />
+        android:id="@+id/menuBottomNavAdd"
+        android:title="Add"
+        android:icon="@drawable/icon_plus" />
 
     <item
-        android:id="@+id/menuBottomNavCommunities"
-        android:title="Communities"
-        android:icon="@drawable/icon_communities" />
+        android:id="@+id/menuBottomNavChats"
+        android:title="chats"
+        android:icon="@drawable/icon_chat" />
 
     <item
-        android:id="@+id/menuBottomNavNotifications"
-        android:title="Notifications"
-        android:icon="@drawable/icon_notifications" />
+        android:id="@+id/menuBottomNavProfile"
+        android:title="Profile"
+        android:icon="@drawable/icon_profile" />
 
 </menu>

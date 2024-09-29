@@ -12,6 +12,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+
+import com.gauravpatil.kindnesscabinet.java_classes.Urls;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -156,7 +158,7 @@ public class VerifyOTPActivity extends AppCompatActivity
         params.put("username",strUsername);
         params.put("password",strPassword);
 
-        client.post("http://192.168.70.39:80/KindnessCabinetAPI/userregisterdetailstbl.php",params,
+        client.post(Urls.userRegister,params,
                 new JsonHttpResponseHandler()
                 {
                     @Override

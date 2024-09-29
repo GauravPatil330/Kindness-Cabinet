@@ -14,6 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.gauravpatil.kindnesscabinet.java_classes.Urls;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -75,7 +76,7 @@ public class SetUp_New_Password_Activity extends AppCompatActivity {
         params.put("mobileno",strMobileNo);
         params.put("password",etNewPassword.getText().toString());
 
-        client.post("http://192.168.70.39:80/KindnessCabinetAPI/userforgetpassword.php",params,
+        client.post(Urls.forgetpassword,params,
                 new JsonHttpResponseHandler()
                 {
                     @Override
