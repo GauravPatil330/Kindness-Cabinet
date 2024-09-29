@@ -3,8 +3,10 @@ package com.gauravpatil.kindnesscabinet;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -38,6 +40,9 @@ public class LoginActivity extends AppCompatActivity
     GoogleSignInOptions googleSignInOptions; //Show option of gmail
     GoogleSignInClient googleSignInClient;  //Selected gmail option store
 
+    SharedPreferences preferences; // Store temporary data within app
+    SharedPreferences.Editor editor; // edit or put the Temporary dada in SharedPreferences
+
 //  GoogleSignInOption => GoogleSignIn => GoogleSignInClient => GoogleSignIn => GoogleSignInAccount (name,email,photo)000
 
     @Override
@@ -52,6 +57,9 @@ public class LoginActivity extends AppCompatActivity
         btnLogin = findViewById(R.id.btnLoginLogin);
         tvSignUp = findViewById(R.id.tvLoginNewUser);
         btnGogleSignIn = findViewById(R.id.btnLoginGoogleWithSignUp);
+
+        preferences = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
+        editor= preferences.edit();
 
         googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         googleSignInClient = GoogleSignIn.getClient(LoginActivity.this,googleSignInOptions);
@@ -200,6 +208,7 @@ public class LoginActivity extends AppCompatActivity
                             {
                                 Toast.makeText(LoginActivity.this, "Login Successfully Done", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+                                editor.putString("username",etUsername.getText().toString()).commit();
                                 startActivity(intent);
                             }
                             else

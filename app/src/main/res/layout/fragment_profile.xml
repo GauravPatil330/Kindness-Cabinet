@@ -18,11 +18,12 @@
                 android:layout_marginTop="20sp"
                 android:orientation="vertical">
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:src="@drawable/icon_profile"
-                    android:layout_gravity="center_horizontal" />
+                    android:id="@+id/civProfilePhoto"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/image_profile" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -206,37 +207,8 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16sp"
-                    android:layout_marginRight="16sp"
-                    android:layout_marginTop="10sp"
-                    app:boxStrokeColor="@color/blue"
-                    app:hintTextColor="@color/black"
-                    app:passwordToggleEnabled="true"
-                    app:passwordToggleTint="#80000000"
-                    app:passwordToggleDrawable="@drawable/password_toggle"
-                    app:boxStrokeWidth="2sp" >
-
-                    <EditText
-                        android:id="@+id/etProfilePassword"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/icon_password"
-                        android:drawablePadding="8sp"
-                        android:fontFamily="@font/adamina"
-                        android:hint="Password"
-                        android:inputType="textPassword"
-                        android:paddingLeft="10sp"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnRegisterRegister"
+                    android:id="@+id/btnProfileSaveChanges"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginLeft="16sp"
@@ -244,12 +216,12 @@
                     android:layout_marginRight="16sp"
                     android:background="@drawable/background_btn_bg"
                     android:fontFamily="@font/aldrich"
-                    android:text="Register"
+                    android:text="Save Changes"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="25sp"
                     android:textStyle="bold"
-                    android:layout_marginBottom="20sp"/>
+                    android:layout_marginBottom="50sp"/>
 
             </LinearLayout>
 

@@ -5,4 +5,6 @@ public class Urls
     public static String userLogin = webService + "userlogin.php";
     public static String userRegister = webService + "userregisterdetailstbl.php";
     public static String forgetpassword = webService + "userforgetpassword.php";
+    public static String myDetails = webService + "mydetails.php";
+    public static String image = webService + "images.php";
 }

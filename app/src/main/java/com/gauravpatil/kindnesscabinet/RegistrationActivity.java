@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 public class RegistrationActivity extends AppCompatActivity
 {
-    EditText etName,etEmailid,etMobileNo,etAddress,etGender,etAge,etUsername,etPassword,etConfirmPassword;
+    EditText etName,etMobileNo,etEmailid,etAddress,etGender,etAge,etUsername,etPassword,etConfirmPassword;
     Button btnRegister;
     ProgressDialog progressDialog;
 
