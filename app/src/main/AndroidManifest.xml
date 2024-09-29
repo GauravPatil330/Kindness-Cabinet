@@ -35,7 +35,8 @@
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/ShowActionBar"/>
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
