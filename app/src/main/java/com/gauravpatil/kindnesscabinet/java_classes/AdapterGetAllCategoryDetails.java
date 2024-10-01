@@ -67,7 +67,7 @@ public class AdapterGetAllCategoryDetails  extends BaseAdapter
         }
 
         final POJOGetAllCategoryDetails obj = pojoGetAllCategoryDetailsList.get(position);
-        holder.tvCategoryName.setText(obj.getCategoryname);
+        holder.tvCategoryName.setText(obj.getGetCategoryname());
 
         Glide.with(activity)
                 .load(Urls.image +obj.getCategoryimage())
