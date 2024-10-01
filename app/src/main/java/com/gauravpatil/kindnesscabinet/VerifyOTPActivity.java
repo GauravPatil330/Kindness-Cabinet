@@ -147,7 +147,7 @@ public class VerifyOTPActivity extends AppCompatActivity
     {
         //Client and Server Communication over network data transfer or manipulate
         AsyncHttpClient client = new AsyncHttpClient(); //Client and Server Communication
-        RequestParams params = new RequestParams();
+        RequestParams params = new RequestParams(); // Put the data
 
         params.put("name",strName);
         params.put("mobileno",strMobileNo);

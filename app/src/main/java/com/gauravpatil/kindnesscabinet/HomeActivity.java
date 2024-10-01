@@ -3,12 +3,8 @@ package com.gauravpatil.kindnesscabinet;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -27,7 +23,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigationView.setSelectedItemId(R.id.menuBottomNavHome);
     }
     HomeFragment homeFragment = new HomeFragment();
-    SearchFragment searchFragment = new SearchFragment();
+    CategoriesFragment categoriesFragment = new CategoriesFragment();
     AddFragment addFragment = new AddFragment();
     ChatsFragment chatsFragment = new ChatsFragment();
     ProfileFragment profileFragment = new ProfileFragment();
@@ -40,7 +36,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         }
         else if(menuItem.getItemId() == R.id.menuBottomNavSearch)
         {
-            getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout,searchFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.homeFrameLayout, categoriesFragment).commit();
         }
         else if(menuItem.getItemId() == R.id.menuBottomNavAdd)
         {
