@@ -88,6 +88,8 @@ public class ProfileFragment extends Fragment
                  super.onSuccess(statusCode, headers, response);
                  try
                  {
+                     progressDialog.dismiss();
+
                      JSONArray jsonArray = response.getJSONArray("getMyDetails");
 
                      for(int i=0; i<jsonArray.length(); i++)
@@ -115,7 +117,7 @@ public class ProfileFragment extends Fragment
                          Glide.with(getActivity())
                                  .load(Urls.image +strImage)
                                  .skipMemoryCache(true)
-                                 .error(R.drawable.image_not_found)
+                                 .error(R.drawable.image_profile)
                                  .into(civProfilePhoto);
                      }
                  }

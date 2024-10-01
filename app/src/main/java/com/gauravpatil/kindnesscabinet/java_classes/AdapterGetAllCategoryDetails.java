@@ -7,10 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
 import com.gauravpatil.kindnesscabinet.R;
-
 import java.util.List;
 import java.util.zip.Inflater;
 
@@ -67,7 +65,7 @@ public class AdapterGetAllCategoryDetails  extends BaseAdapter
         }
 
         final POJOGetAllCategoryDetails obj = pojoGetAllCategoryDetailsList.get(position);
-        holder.tvCategoryName.setText(obj.getGetCategoryname());
+        holder.tvCategoryName.setText(obj.getCategoryname);
 
         Glide.with(activity)
                 .load(Urls.image +obj.getCategoryimage())
