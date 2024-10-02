@@ -88,8 +88,6 @@ public class ProfileFragment extends Fragment
                  super.onSuccess(statusCode, headers, response);
                  try
                  {
-                     progressDialog.dismiss();
-
                      JSONArray jsonArray = response.getJSONArray("getMyDetails");
 
                      for(int i=0; i<jsonArray.length(); i++)
@@ -120,6 +118,8 @@ public class ProfileFragment extends Fragment
                                  .error(R.drawable.image_profile)
                                  .into(civProfilePhoto);
                      }
+
+                     progressDialog.dismiss();
                  }
                  catch (JSONException e)
                  {

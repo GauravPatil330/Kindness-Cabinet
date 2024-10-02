@@ -7,7 +7,6 @@ public class POJOGetAllCategoryDetails
     // POJO class multiple data get and set
 
     String id,categoryimage,getCategoryname;
-
     public POJOGetAllCategoryDetails(String id, String categoryimage, String getCategoryname)
     {
         this.id = id;

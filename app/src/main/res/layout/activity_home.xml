@@ -22,6 +22,7 @@
         android:id="@+id/homeBottomNav"
         app:menu="@menu/menu_home_bottom_nav_bar"
         android:background="#B5DDDF"
+        app:backgroundTint="#B5DDDF"
         app:itemTextColor="#3C47B3"
         app:itemIconTint="#3C47B3"
         app:itemIconSize="30sp"

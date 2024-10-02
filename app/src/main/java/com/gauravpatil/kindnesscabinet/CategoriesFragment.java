@@ -25,6 +25,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
@@ -40,7 +41,7 @@ public class CategoriesFragment extends Fragment
     {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_categories, container, false);
-
+        pojoGetAllCategoryDetailsList = new ArrayList<>();
         lvShowAllCategory = view.findViewById(R.id.lvCategoryFragmentShowMultipleCategory);
         tvNoCategoryAvailable = view.findViewById(R.id.tvCategoryFragmentNoCategoryAvailable);
 
@@ -63,7 +64,7 @@ public class CategoriesFragment extends Fragment
                 super.onSuccess(statusCode, headers, response);
                 try
                 {
-                    JSONArray jsonArray = response.getJSONArray("getMyDetails");
+                    JSONArray jsonArray = response.getJSONArray("getAllcategory");
 
                     if(jsonArray.isNull(0))
                     {
