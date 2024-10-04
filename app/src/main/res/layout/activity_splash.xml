@@ -25,7 +25,7 @@
         android:layout_below="@id/ivSplashLogo"
         android:layout_marginTop="20sp"
         android:fontFamily="@font/adamina"
-        android:text="Kindness okkk"
+        android:text=" Cabinet"
         android:textAlignment="center"
         android:textColor="#FF6F00"
         android:textSize="30sp"
