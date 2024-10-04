@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -36,20 +37,56 @@ public class CategoriesFragment extends Fragment
     TextView tvNoCategoryAvailable;
     List<POJOGetAllCategoryDetails> pojoGetAllCategoryDetailsList;
     AdapterGetAllCategoryDetails adapterGetAllCategoryDetails;
+    SearchView searchCategory;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
     {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_categories, container, false);
         pojoGetAllCategoryDetailsList = new ArrayList<>();
+        searchCategory = view.findViewById(R.id.svCategoryFragmentSearchCategory);
         lvShowAllCategory = view.findViewById(R.id.lvCategoryFragmentShowMultipleCategory);
         tvNoCategoryAvailable = view.findViewById(R.id.tvCategoryFragmentNoCategoryAvailable);
+
+        searchCategory.setOnQueryTextListener(new SearchView.OnQueryTextListener()
+        {
+            @Override
+            public boolean onQueryTextSubmit(String query)
+            {
+                searchCategory(query);
+                return false;
+            }
+            @Override
+            public boolean onQueryTextChange(String query)
+            {
+                searchCategory(query);
+                return false;
+            }
+        });
 
         getAllCategory();
 
         return view;
     }
+    private void searchCategory(String query)
+    {
+        List<POJOGetAllCategoryDetails> tempCategory = new ArrayList<>();
+        tempCategory.clear();
 
+        for (POJOGetAllCategoryDetails obj:pojoGetAllCategoryDetailsList)
+        {
+            if(obj.getCategoryname().toUpperCase().contains(query.toUpperCase()))
+            {
+                tempCategory.add(obj);
+                adapterGetAllCategoryDetails = new AdapterGetAllCategoryDetails(tempCategory,getActivity());
+                lvShowAllCategory.setAdapter(adapterGetAllCategoryDetails);
+            }
+            else
+            {
+                tvNoCategoryAvailable.setVisibility(View.VISIBLE);
+            }
+        }
+    }
     private void getAllCategory()
     {
         //Client and Server Communication over network data transfer or manipulate

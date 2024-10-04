@@ -34,7 +34,7 @@ public class POJOGetAllCategoryDetails
         this.categoryimage = categoryimage;
     }
 
-    public String getGetCategoryname()
+    public String getCategoryname()
     {
         return getCategoryname;
     }
